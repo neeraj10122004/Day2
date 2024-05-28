@@ -6,6 +6,7 @@ from langchain.agents.agent_types import AgentType
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
 
 
+
 st.title("Csv_Data_Analysis_LLM_Agent")
 
 if api_key := st.text_input("Enter the API Key for Gemini"):
@@ -28,6 +29,6 @@ if api_key := st.text_input("Enter the API Key for Gemini"):
             st.markdown(prompt)
 
         with st.chat_message("assistant"):
-            response=data_analysis_agent.invoke("Analyze this data.")
+            response=data_analysis_agent.invoke(prompt)
             st.markdown(response)
         st.session_state.messages.append({"role": "assistant", "content": response})
