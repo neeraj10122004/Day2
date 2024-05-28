@@ -3,3 +3,4 @@ langchain_experimental
 langchain-openai
 langchain-google-genai
 streamlit
+tabulate
